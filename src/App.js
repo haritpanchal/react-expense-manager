@@ -1,10 +1,11 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expenses = [
     {
       id: "e1",
-      title: "Toilet Paper",
+      title: "Paper",
       amount: 94.12,
       date: new Date(2020, 7, 14),
     },
@@ -23,9 +24,13 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expenseData) => {
+    console.log(expenseData);
+  };
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpend={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
