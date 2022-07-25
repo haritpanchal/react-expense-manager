@@ -1,5 +1,5 @@
 # react-expense-manager
 React Expense Manager
 
-# live url
+# netlify url
 https://panchal-expense-manager.netlify.app/
